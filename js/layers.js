@@ -26,4 +26,29 @@ addLayer("p", {
     ],
     layerShown(){return true}
 })
-addLayer("p", {
+addLayer("p1", {
+  name: "prestige ^1",
+  symbol: "p^1"
+  startData() { return {
+        unlocked: true,
+		points: new Decimal(0),
+    }},
+    color: "#4BDC13",
+    requires: new Decimal(10), 
+    resource: "prestige points", 
+    baseResource: "points", 
+    baseAmount() {return player.points}, 
+    type: "normal", 
+    exponent: 0.5, 
+    gainMult() { 
+        mult = new Decimal(1)
+        return mult
+    },
+    gainExp() { 
+        return new Decimal(1)
+    },
+    row: 0, 
+    hotkeys: [
+        {key: "1", description: "1: Reset for p^1", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+    ],
+    layerShown(){return true}
