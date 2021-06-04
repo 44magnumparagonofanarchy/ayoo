@@ -1,10 +1,10 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
+	name: "The Inception Tree?",
+	id: "ytsaTerAsebuP",
+	author: "44. Magnum",
 	pointsName: "points",
-	discordName: "",
-	discordLink: "",
+	discordName: "44. Magnum, Paragon of Anarchy!",
+	discordLink: "none lol",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
 	
 	offlineLimit: 1,  // In hours
@@ -13,13 +13,13 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "0.0",
-	name: "Literally nothing",
+	name: "Hanosa",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
-		- Added things.<br>
-		- Added stuff.`
+		- Do we wake them up?.<br>
+		- Yes..`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 

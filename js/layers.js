@@ -39,7 +39,7 @@ addLayer("p1", {
     }},
     color: "#4BDC13",
     requires: new Decimal(10), 
-    resource: "prestige points", 
+    resource: "Prestige Points^1", 
     baseResource: "points", 
     baseAmount() {return player.points}, 
     type: "normal", 
@@ -55,6 +55,13 @@ addLayer("p1", {
     hotkeys: [
         {key: "1", description: "1: Reset for p^1", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+  upgrades: {
+11: {
+  name: "Wake up",
+  description: "You've been asleep so long.",
+  cost: new Decimal(1),
+  },
+},
+
 })
-      
