@@ -1,3 +1,4 @@
+/*
 addLayer("p", {
     name: "prestige", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "P", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -26,9 +27,12 @@ addLayer("p", {
     ],
     layerShown(){return true}
 })
+*/
+
 addLayer("p1", {
   name: "prestige ^1",
-  symbol: "p^1"
+  symbol: "p^1",
+  position: 0,
   startData() { return {
         unlocked: true,
 		points: new Decimal(0),
@@ -52,3 +56,5 @@ addLayer("p1", {
         {key: "1", description: "1: Reset for p^1", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
+})
+      
