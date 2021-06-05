@@ -62,8 +62,6 @@ addLayer("p1", {
   description: "You've been asleep so long.",
   cost: new Decimal(1),
   },
-},
-  
 12: {
   name: "Stay Asleep",
   description: "Just one more minute...",
@@ -71,4 +69,4 @@ addLayer("p1", {
   },
 },
          
-)
+})

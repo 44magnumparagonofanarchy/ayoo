@@ -43,6 +43,9 @@ function getPointGen() {
 
 	let gain = new Decimal(1)
   if (hasUpgrade('p1', 11)) gain = gain.times(2)
+  if (hasUpgrade('p1'))
+  if (hasUpgrade('p1', 12)) gain = gain.times(1e280000000)// quotes required for >e308
+  //IK, i wanted this to NaN
 	return gain
 }
 
@@ -56,7 +59,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("e28000000"))
 }
 
 
