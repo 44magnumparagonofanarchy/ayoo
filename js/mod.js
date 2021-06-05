@@ -43,12 +43,10 @@ function getPointGen() {
 
 	let gain = new Decimal(1)
   if (hasUpgrade('p1', 11)) gain = gain.times(2)
-  if (hasUpgrade('p1', 12)) gain = gain.times(1e280000000e1
-                                             
-                                             
-                                            )// quotes required for >e308
+  if (hasUpgrade('p1'))
+  if (hasUpgrade('p1', 12)) gain = gain.times(1e280000000)// quotes required for >e308
   //IK, i wanted this to NaN
-  return gain// it won't NaN, it will just be infinity
+	return gain
 }
 
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values

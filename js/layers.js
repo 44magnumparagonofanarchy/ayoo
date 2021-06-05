@@ -61,13 +61,11 @@ addLayer("p1", {
   name: "Wake up",
   description: "You've been asleep so long.",
   cost: new Decimal(1),
-   canAfford(){return !hasUpgrade("p1",12)&&player.p1.points.gte(this.cost)}
   },
 12: {
   name: "Stay Asleep",
   description: "Just one more minute...",
   cost: new Decimal(1),
-  canAfford(){return !hasUpgrade("p1",11)&&player.p1.points.gte(this.cost)}
   },
 },
          
