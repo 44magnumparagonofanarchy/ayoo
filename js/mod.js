@@ -46,7 +46,7 @@ function getPointGen() {
   if (hasUpgrade('p1', 12)) gain = gain.times(NaN)// quotes required for >e308
   //IK, i wanted this to NaN
   return gain// it won't NaN, it will just be infinity
-}
+}//well not anymore ;)
 
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
 function addedPlayerData() { return {
