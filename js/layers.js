@@ -33,42 +33,57 @@ addLayer("p1", {
   name: "prestige ^1",
   symbol: "p^1",
   position: 0,
-  startData() { return {
-        unlocked: true,
-		points: new Decimal(0),
-    }},
-    color: "#4BDC13",
-    requires: new Decimal(10), 
-    resource: "Prestige Points^1", 
-    baseResource: "points", 
-    baseAmount() {return player.points}, 
-    type: "normal", 
-    exponent: 0.5, 
-    gainMult() { 
-        mult = new Decimal(1)
-        return mult
-    },
-    gainExp() { 
-        return new Decimal(1)
-    },
-    row: 0, 
-    hotkeys: [
-        {key: "1", description: "1: Reset for p^1", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
-    ],
-    layerShown(){return true},
+  startData() {
+    return {
+      unlocked: true,
+      points: new Decimal(0)
+    };
+  },
+  color: "#4BDC13",
+  requires: new Decimal(10),
+  resource: "Prestige Points^1",
+  baseResource: "points",
+  baseAmount() {
+    return player.points;
+  },
+  type: "normal",
+  exponent: 0.5,
+  gainMult() {
+    mult = new Decimal(1);
+    return mult;
+  },
+  gainExp() {
+    return new Decimal(1);
+  },
+  row: 0,
+  hotkeys: [
+    {
+      key: "1",
+      description: "1: Reset for p^1",
+      onPress() {
+        if (canReset(this.layer)) doReset(this.layer);
+      }
+    }
+  ],
+  layerShown() {
+    return true;
+  },
   upgrades: {
-11: {
-  name: "Wake up",
-  description: "You've been asleep so long.",
-  cost: new Decimal(1),
-   canAfford(){return !hasUpgrade("p1",12)&&player.p1.points.gte(this.cost)}
-  },
-12: {
-  name: "Stay Asleep",
-  description: "Just one more minute...",
-  cost: new Decimal(1),
-  canAfford(){return !hasUpgrade("p1",11)&&player.p1.points.gte(this.cost)}
-  },
-},
-         
-})
+    11: {
+      name: "Wake up",
+      description: "You've been asleep so long.",
+      cost: new Decimal(1),
+      canAfford() {
+        return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
+      }
+    },
+    12: {
+      name: "Stay Asleep",
+      description: "Just one more minute...",
+      cost: new Decimal(1),
+      canAfford() {
+        return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
+      }
+    }
+  }
+});
