@@ -98,8 +98,8 @@ addLayer("p2", {
     };
   },
   color: "#4BDC13",
-  requires: baseAmount(){return player.p1.points}
-  ,
+  requires: new Decimal(10),
+  baseAmount(){return player.p1.points},
   resource: "Prestige Points^2",
   baseResource: "p1",
   baseAmount() {
@@ -117,7 +117,7 @@ addLayer("p2", {
   row: 0,
   hotkeys: [
     {
-      key: "1",
+      key: "2",
       description: "1: Reset for p^1",
       onPress() {
         if (canReset(this.layer)) doReset(this.layer);
