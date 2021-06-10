@@ -90,7 +90,7 @@ addLayer("p1", {
 addLayer("p2", {
   name: "prestige ^2",
   symbol: "p^2",
-  position: 0,
+  position: 1,
   startData() {
     return {
       unlocked: true,
@@ -98,7 +98,8 @@ addLayer("p2", {
     };
   },
   color: "#4BDC13",
-  requires: new Decimal(10),
+  requires: baseAmount(){return player.p1.points}
+  ,
   resource: "Prestige Points^2",
   baseResource: "p1",
   baseAmount() {
@@ -141,6 +142,7 @@ addLayer("p2", {
       cost: new Decimal(1),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
+        requires
       }
     }
   }
