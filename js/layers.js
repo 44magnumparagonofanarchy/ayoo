@@ -30,8 +30,8 @@ addLayer("p", {
 */
 
 addLayer("p1", {
-  name: "prestige ^1",
-  symbol: "p^1",
+  name: "prestige^1",
+  symbol: "p<sup>1",
   position: 0,
   startData() {
     return {
@@ -59,7 +59,7 @@ addLayer("p1", {
   hotkeys: [
     {
       key: "1",
-      description: "1: Reset for p^1",
+      description: "1: Reset for p<sup>1",
       onPress() {
         if (canReset(this.layer)) doReset(this.layer);
       }
