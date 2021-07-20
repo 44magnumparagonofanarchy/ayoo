@@ -30,8 +30,8 @@ addLayer("p", {
 */
 
 addLayer("p1", {
-  name: "prestige^1",
-  symbol: "p<sup>1",
+  name: "p¹",
+  symbol: "p¹",
   position: 0,
   startData() {
     return {
@@ -41,7 +41,7 @@ addLayer("p1", {
   },
   color: "#4BDC13",
   requires: new Decimal(10),
-  resource: "Prestige Points^1",
+  resource: "p¹",
   baseResource: "points",
   baseAmount() {
     return player.points;
@@ -70,7 +70,6 @@ addLayer("p1", {
   },
   upgrades: {
     11: {
-      name: "Wake up",
       title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
