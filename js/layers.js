@@ -71,6 +71,7 @@ addLayer("p1", {
   upgrades: {
     11: {
       name: "Wake up",
+      title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
       canAfford() {
@@ -79,6 +80,7 @@ addLayer("p1", {
     },
     12: {
       name: "Stay Asleep",
+      title : "Stay asleep",
       description: "Just one more minute...",
       cost: new Decimal(1),
       canAfford() {
@@ -130,6 +132,7 @@ addLayer("p2", {
   upgrades: {
     11: {
       name: "Wake up",
+      title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
       canAfford() {
@@ -137,7 +140,8 @@ addLayer("p2", {
       }
     },
     12: {
-      name: "Stay Asleep",
+      name: "Stay asleep",
+      title : "Stay asleep",
       description: "Just one more minute...",
       cost: new Decimal(1),
       canAfford() {
