@@ -129,7 +129,7 @@ addLayer("p2", {
     if !hasUpgrade('p1', 11),
     return true,
     else,
-      ;
+      return false;
   },
   upgrades: {
     11: {
