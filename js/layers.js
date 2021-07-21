@@ -85,7 +85,14 @@ addLayer("p1", {
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
-    }
+    },
+    21: {
+      name: "What?",
+      title: "Look around",
+      description: "You notice strange things, like birds flying upside down. You aren't awake yet.",
+      cost: new Decimal(10),
+      canAfford() {
+        return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
   }
 });
 addLayer("p2", {
@@ -128,7 +135,9 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    return true;
+    if (hasUpgrade('p1', 21)) return true
+    else
+    return false
   },
   upgrades: {
     11: {
