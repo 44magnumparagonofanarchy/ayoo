@@ -85,8 +85,7 @@ addLayer("p1", {
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
-    },
-    21: {}
+    }
   }
 });
 addLayer("p2", {
@@ -95,17 +94,17 @@ addLayer("p2", {
   position: 1,
   startData() {
     return {
-      unlocked: true,
+      unlocked: false,
       points: new Decimal(100)
     };
   },
   color: "#4BDC13",
   requires: new Decimal(10),
-  baseAmount(){return player.p1.points(10)},
+  baseAmount(){return player.p1.points},
   resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
-    return player.p1.points;
+    return player.points;
   },
   type: "normal",
   exponent: 0.5,
@@ -127,9 +126,8 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    return true}
+    return true;
   },
-         };
   upgrades: {
     11: {
       name: "Wake up",
