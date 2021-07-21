@@ -95,7 +95,7 @@ addLayer("p2", {
   position: 1,
   startData() {
     return {
-      unlocked: false,
+      unlocked: true,
       points: new Decimal(100)
     };
   },
@@ -127,8 +127,9 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    return hasUpgrade("p1", 21)}
+    return true}
   },
+         };
   upgrades: {
     11: {
       name: "Wake up",
