@@ -59,7 +59,7 @@ addLayer("p1", {
   hotkeys: [
     {
       key: "1",
-      description: "1: Reset for p<sup>1",
+      description: "1: Reset for p¹",
       onPress() {
         if (canReset(this.layer)) doReset(this.layer);
       }
@@ -75,6 +75,7 @@ addLayer("p1", {
       cost: new Decimal(1),
       canAfford() {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
+        pay()
       }
     },
     12: {
@@ -95,7 +96,7 @@ addLayer("p2", {
   startData() {
     return {
       unlocked: false,
-      points: new Decimal(100)
+      points: new Decimal(0)
     };
   },
   color: "#4BDC13",
@@ -119,7 +120,7 @@ addLayer("p2", {
   hotkeys: [
     {
       key: "2",
-      description: "1: Reset for p^1",
+      description: "2: Reset for p²",
       onPress() {
         if (canReset(this.layer)) doReset(this.layer);
       }
@@ -149,3 +150,44 @@ addLayer("p2", {
     }
   }
 });
+addLayer("p3", {
+  name: "p³",
+  symbol: "p³",
+  position: 2,
+  startData() {
+    return {
+      unlocked: false,
+      points: new Decimal(0)
+    };
+  },
+  color: "#4BDC13",
+  requires: new Decimal(100),
+  resource: "Prestige Points³",
+  baseResource: "p2",
+  baseAmount() {
+    return player.p2.points;
+  },
+  type: "normal",
+  exponent: 0.5,
+  gainMult() {
+    mult = new Decimal(1);
+    return mult;
+  },
+  gainExp() {
+    return new Decimal(1);
+  },
+  row: 3,
+  hotkeys: [
+    {
+      key: "3",
+      description: "3: Reset for p<sup>3",
+      onPress() {
+        if (canReset(this.layer)) doReset(this.layer);
+      }
+    }
+  ],
+  layerShown() {
+    return true;
+  },
+}
+        );
