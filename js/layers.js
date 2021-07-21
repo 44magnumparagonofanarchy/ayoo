@@ -41,7 +41,7 @@ addLayer("p1", {
   },
   color: "#4BDC13",
   requires: new Decimal(10),
-  resource: "p¹",
+  resource: "Prestige Points¹",
   baseResource: "points",
   baseAmount() {
     return player.points;
@@ -89,8 +89,8 @@ addLayer("p1", {
   }
 });
 addLayer("p2", {
-  name: "prestige ^2",
-  symbol: "p^2",
+  name: "p²",
+  symbol: "p²",
   position: 1,
   startData() {
     return {
@@ -101,7 +101,7 @@ addLayer("p2", {
   color: "#4BDC13",
   requires: new Decimal(10),
   baseAmount(){return player.p1.points},
-  resource: "Prestige Points^2",
+  resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
     return player.points;
@@ -145,7 +145,6 @@ addLayer("p2", {
       cost: new Decimal(1),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
-        requires
       }
     }
   }
