@@ -85,7 +85,8 @@ addLayer("p1", {
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
-    }
+    },
+    21: {}
   }
 });
 addLayer("p2", {
@@ -100,11 +101,11 @@ addLayer("p2", {
   },
   color: "#4BDC13",
   requires: new Decimal(10),
-  baseAmount(){return player.p1.points},
+  baseAmount(){return player.p1.points(10)},
   resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
-    return player.points;
+    return player.p1.points;
   },
   type: "normal",
   exponent: 0.5,
@@ -126,7 +127,7 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    return true;
+    return hasUpgrade("p1", 21)}
   },
   upgrades: {
     11: {
