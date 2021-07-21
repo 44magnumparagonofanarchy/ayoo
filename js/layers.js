@@ -88,11 +88,11 @@ addLayer("p1", {
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
-    }
-  } // fixed, 
-}); // bruh what how the fuck did the parens get fucked up this bad
-addLayer("p2", {//i'm new to javascript don't judge my extremely bad skills
-  name: "p²",
+    } // p2 21 does not exist, tehrefore the game breaks
+  } // lmao
+}); //i ctrl z'd it out of existance lmao
+addLayer("p2", {
+  name: "p²", 
   symbol: "p²",
   position: 1,
   startData() {
@@ -140,6 +140,12 @@ addLayer("p2", {//i'm new to javascript don't judge my extremely bad skills
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
+    },
+    21: {
+      name: "WAT",
+      title : "Heh?",
+      description: "What the hell is going on, seriously.",
+      cost: new Decimal(20)
     }
   }
 });
