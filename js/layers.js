@@ -75,7 +75,6 @@ addLayer("p1", {
       cost: new Decimal(1),
       canAfford() {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
-        pay()
       }
     },
     12: {
