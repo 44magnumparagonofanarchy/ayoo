@@ -126,7 +126,10 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    return true;
+    if !hasUpgrade('p1', 11),
+    return true,
+    else,
+      ;
   },
   upgrades: {
     11: {
@@ -186,7 +189,7 @@ addLayer("p3", {
     }
   ],
   layerShown() {
-    return true;
+    return false;
   },
 }
         );
