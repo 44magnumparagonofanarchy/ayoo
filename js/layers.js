@@ -94,7 +94,7 @@ addLayer("p2", {
   position: 1,
   startData() {
     return {
-      unlocked: true,
+      unlocked: false,
       points: new Decimal(100)
     };
   },
