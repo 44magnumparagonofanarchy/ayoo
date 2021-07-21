@@ -104,7 +104,7 @@ addLayer("p2", {
   resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
-    return player.points;
+    return player.p1.points;
   },
   type: "normal",
   exponent: 0.5,
@@ -130,19 +130,10 @@ addLayer("p2", {
   },
   upgrades: {
     11: {
-      name: "Wake up",
-      title : "Wake up",
-      description: "You've been asleep so long.",
-      cost: new Decimal(1),
-      canAfford() {
-        return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
-      }
-    },
-    12: {
-      name: "Stay asleep",
-      title : "Stay asleep",
-      description: "Just one more minute...",
-      cost: new Decimal(1),
+      name: "What",
+      title : "What?",
+      description: "You look around, and see a top spinning... you aren't awake yet",
+      cost: new Decimal(10),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
