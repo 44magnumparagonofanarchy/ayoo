@@ -73,6 +73,10 @@ addLayer("p1", {
       title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
+      effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+      }
+      }
       canAfford() {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
       }
