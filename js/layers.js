@@ -75,7 +75,6 @@ addLayer("p1", {
       cost: new Decimal(1),
       effect() {
         return player[this.layer].points.add(1).pow(0.5)
-      }
       },
       canAfford() {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
@@ -90,9 +89,9 @@ addLayer("p1", {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
     }
-  }
-});
-addLayer("p2", {
+  } // fixed, 
+}); // bruh what how the fuck did the parens get fucked up this bad
+addLayer("p2", {//i'm new to javascript don't judge my extremely bad skills
   name: "p²",
   symbol: "p²",
   position: 1,
