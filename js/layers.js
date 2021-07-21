@@ -73,9 +73,6 @@ addLayer("p1", {
       title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
-      effect() {
-        return player[this.layer].points.add(1).pow(0.5)
-      },
       canAfford() {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
       }
@@ -145,7 +142,10 @@ addLayer("p2", {
       name: "WAT",
       title : "Heh?",
       description: "What the hell is going on, seriously.",
-      cost: new Decimal(20)
+      cost: new Decimal(20),
+      unlocked() {
+        return !hasUpgrade("p2", 11) && player.p2.points.gte(this.cost);
+      }
     }
   }
 });

@@ -44,7 +44,6 @@ function getPointGen() {
 	let gain = new Decimal(1)
   if (hasUpgrade('p1', 11)) gain = gain.times(2)
   if (hasUpgrade('p1', 12)) gain = gain.times(NaN)
-  if (hasUpgrade('p1', 11)) gain = gain.times(upgradeEffect('p2', 21))
   
   return gain// it won't NaN, it will just be infinity
 }//well not anymore ;)
