@@ -70,7 +70,7 @@ addLayer("p1", {
   },
   upgrades: {
     11: {
-      title: "Wake up",
+      title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
       canAfford() {
@@ -79,20 +79,14 @@ addLayer("p1", {
     },
     12: {
       name: "Stay Asleep",
-      title: "Stay asleep",
+      title : "Stay asleep",
       description: "Just one more minute...",
       cost: new Decimal(1),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
     },
-    21: {
-      name: "What?",
-      title: "Look around",
-      description: "You notice strange things, like birds flying upside down. You aren't awake yet.",
-      cost: new Decimal(10),
-      canAfford() {
-        return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
+    21: {}
   }
 });
 addLayer("p2", {
@@ -106,14 +100,12 @@ addLayer("p2", {
     };
   },
   color: "#4BDC13",
-  requires: new Decimal(100),
-  baseAmount() {
-    return player.p1.points(10);
-  },
+  requires: new Decimal(10),
+  baseAmount(){return player.p1.points(10)},
   resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
-    return player.points;
+    return player.p1.points;
   },
   type: "normal",
   exponent: 0.5,
@@ -135,14 +127,12 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    if (hasUpgrade('p1', 21)) return true
-    else
-    return false
+    return hasUpgrade("p1", 21)}
   },
   upgrades: {
     11: {
       name: "Wake up",
-      title: "Wake up",
+      title : "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
       canAfford() {
@@ -151,7 +141,7 @@ addLayer("p2", {
     },
     12: {
       name: "Stay asleep",
-      title: "Stay asleep",
+      title : "Stay asleep",
       description: "Just one more minute...",
       cost: new Decimal(1),
       canAfford() {
