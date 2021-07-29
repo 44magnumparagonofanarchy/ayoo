@@ -134,7 +134,7 @@ addLayer("p2", {
       name: "What",
       title : "What?",
       description: "You look around, and see a top spinning... you've watched enough of a moive to know what that means",
-      cost: new Decimal(10),
+      cost: new Decimal(20),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
@@ -151,7 +151,7 @@ addLayer("p2", {
     12: {
       name: "HEEEEEEH",
       title: "NO LEMMIE BUY THE ONE BEFORE THIS!",
-      desctription: "No, I don't think I will",
+      description: "No, I don't think I will",
       cost: new Decimal(100),
       unlocked() { return hasUpgrade("p2", 21) || hasUpgrade("p1", 11) }
     }
