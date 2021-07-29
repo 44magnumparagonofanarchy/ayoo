@@ -191,10 +191,11 @@ addLayer("p3", {
   name: "p³",
   symbol: "p³",
   position: 2,
+  layerShown() { return hasUpgrade('p2', 34) },
   startData() {
     return {
       unlocked: false,
-      points: new Decimal(0)
+      points: new Decimal(0),
     };
   },
   color: "#4BDC13",
