@@ -175,7 +175,15 @@ addLayer("p2", {
       name: "",
       title: " ",
       discription: "spooky ghost",
-      style
+      style: {
+    opacity: 0
+      }
+    },
+    34: {
+      name: "HAHHHAHAHAH",
+      title: "WHY IS THIS HERE?",
+      description: "I WANTED IT TO BE HERE!",
+      unlocked() { return hasUpgrade("p2", 12) || hasUpgrade("p1", 11) }
     }
   }
 });
