@@ -170,6 +170,13 @@ addLayer("p2", {
       style: {
     opacity: 0
       }
+    },
+    33: {
+      name: "",
+      title: " ",
+      discription: "spooky ghost",
+      style
+    }
   }
 });
 addLayer("p3", {
