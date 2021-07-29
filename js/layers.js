@@ -155,11 +155,21 @@ addLayer("p2", {
       cost: new Decimal(100),
       unlocked() { return hasUpgrade("p2", 21) || hasUpgrade("p1", 11) }
     },
-    34: {
-      name: "HEHEHEHHE",
-      title: "why is it over here :(",
-      discription: ""
-    }
+    31: {
+      name: "",
+      title: " ",
+      discription: "spooky ghost",
+      style: {
+    opacity: 0
+}
+    },
+    32: {
+      name: "",
+      title: " ",
+      discription: "spooky ghost",
+      style: {
+    opacity: 0
+      }
   }
 });
 addLayer("p3", {
