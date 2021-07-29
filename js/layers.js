@@ -192,7 +192,7 @@ addLayer("p3", {
   name: "p³",
   symbol: "p³",
   position: 2,
-  layerShown() { return hasUpgrade('p2', 34) },
+  layerShown() { return hasUpgrade('p2', 32) },
   startData() {
     return {
       unlocked: false,
