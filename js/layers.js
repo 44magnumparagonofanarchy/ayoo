@@ -137,17 +137,23 @@ addLayer("p2", {
       cost: new Decimal(10),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
-        
       }
     },
     21: {
       name: "WAT",
-      title : "Heh?",
+      title: "Heh?",
       description: "What the hell is going on, seriously.",
       cost: new Decimal(20),
       unlocked() {
         return !hasUpgrade("p2", 11) && player.p2.points.gte(this.cost);
       }
+    },
+    12: {
+      name: "HEEEEEEH",
+      title: "NO LEMMIE BUY THE ONE BEFORE THIS!",
+      desctription: "No, I don't think I will",
+      cost: new Decimal(100),
+      unlocked() { return hasUpgrade("p2", 21) || hasUpgrade("p1", 11) }
     }
   }
 });
