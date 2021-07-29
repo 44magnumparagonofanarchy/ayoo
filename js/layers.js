@@ -127,15 +127,13 @@ addLayer("p2", {
   ],
   layerShown() {
     if (hasUpgrade('p1', 11))
-    return true,
-    else
-      return false;
+    return true;
   },
   upgrades: {
     11: {
       name: "What",
       title : "What?",
-      description: "You look around, and see a top spinning... you aren't awake yet",
+      description: "You look around, and see a top spinning... you've watched enough of a moive to know what that means",
       cost: new Decimal(10),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
