@@ -154,6 +154,11 @@ addLayer("p2", {
       description: "No, I don't think I will",
       cost: new Decimal(100),
       unlocked() { return hasUpgrade("p2", 21) || hasUpgrade("p1", 11) }
+    },
+    34: {
+      name: "HEHEHEHHE",
+      title: "why is it over here :(",
+      discription: ""
     }
   }
 });
