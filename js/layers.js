@@ -158,7 +158,7 @@ addLayer("p2", {
     31: {
       name: "",
       title: " ",
-      discription: "spooky ghost",
+      description: "spooky ghost",
       style: {
     opacity: 0
 }
@@ -166,7 +166,7 @@ addLayer("p2", {
     32: {
       name: "",
       title: " ",
-      discription: "spooky ghost",
+      description: "spooky ghost",
       style: {
     opacity: 0
       }
@@ -174,7 +174,7 @@ addLayer("p2", {
     33: {
       name: "",
       title: " ",
-      discription: "spooky ghost",
+      description: "spooky ghost",
       style: {
     opacity: 0
       }
@@ -183,7 +183,8 @@ addLayer("p2", {
       name: "HAHHHAHAHAH",
       title: "WHY IS THIS HERE?",
       description: "I WANTED IT TO BE HERE!",
-      unlocked() { return hasUpgrade("p2", 12) || hasUpgrade("p1", 11) }
+      unlocked() { return hasUpgrade("p2", 12) || hasUpgrade("p1", 11) },
+      cost: new Decimal(1000)
     }
   }
 });
