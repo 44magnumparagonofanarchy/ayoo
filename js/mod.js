@@ -21,7 +21,7 @@ let changelog = `<h1>Changelog:</h1><br>
 		- Do we wake them up?.<br>
 		- Yes..`
 
-let winText = `Congratulations! You have reached the end and beaten... wait...`
+let winText = `Congratulations! you won, for now... now, let me say it's been awesome to dev, this all took around a month so don't expect 297 layers in a single update, sorry! for now, the top has stopped.`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
