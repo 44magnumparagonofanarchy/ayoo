@@ -217,6 +217,9 @@ addLayer("p3", {
     return new Decimal(1);
   },
   row: 3,
+  effect() {
+    return player.p3.points.plus(1)
+  },
   hotkeys: [
     {
       key: "3",
