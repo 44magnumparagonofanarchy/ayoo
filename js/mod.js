@@ -46,6 +46,7 @@ function getPointGen() {
   if (hasUpgrade('p1', 12)) gain = gain.times(NaN)
   if (hasUpgrade('p2', 11)) gain = fain.times(1000000000000000000000000000000000000)
   if (hasUpgrade('p3', 11)) gain = gain.times(upgradeEffect('p3', 11))
+  if (hasUpgrade('p1', 31)) gain = gain.times("e28000000")
   
   return gain// it won't NaN, it will just be infinity
 }//well not anymore ;)
