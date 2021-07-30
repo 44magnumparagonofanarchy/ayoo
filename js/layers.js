@@ -225,8 +225,6 @@ addLayer("p3", {
       }
     }
   ],
-  layerShown() {
-    return false;
   },
-}
+
         );
