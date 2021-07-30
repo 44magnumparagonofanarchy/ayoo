@@ -135,8 +135,7 @@ addLayer("p2", {
   layerShown() {
     if (player.p2.unlocked) return true;
     if (hasUpgrade("p1", 11)) return true;
-    else 
-      return false;
+    else return false;
   },
   upgrades: {
     11: {
@@ -207,6 +206,7 @@ addLayer("p3", {
   symbol: "p³",
   position: 2,
   layerShown() {
+    if (player.p3.unlocked) return true;
     return hasUpgrade("p2", 34);
   },
   startData() {
@@ -234,6 +234,14 @@ addLayer("p3", {
   row: 3,
   effect() {
     return player.p3.points.plus(1);
+  },
+  upgrades: {
+    11: {
+      name: "progress",
+      title: "FECKIN' PROGRESS!",
+      description: "You decided to go back to the first layer, and found another top. you broke it. now p¹ points multiply point gain.",
+      cost : new Decimal(10)
+    }
   },
   hotkeys: [
     {
