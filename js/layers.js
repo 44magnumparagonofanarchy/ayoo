@@ -50,8 +50,8 @@ addLayer("p1", {
   exponent: 0.5,
   gainMult() {
     mult = new Decimal(1);
-    return mult;
     mult = mult.mul(tmp.p3.effect);
+    return mult;
   },
   gainExp() {
     return new Decimal(1);
@@ -71,7 +71,7 @@ addLayer("p1", {
   },
   upgrades: {
     11: {
-      title : "Wake up",
+      title: "Wake up",
       description: "You've been asleep so long.",
       cost: new Decimal(1),
       canAfford() {
@@ -80,7 +80,7 @@ addLayer("p1", {
     },
     12: {
       name: "Stay Asleep",
-      title : "Stay asleep",
+      title: "Stay asleep",
       description: "Just one more minute...",
       cost: new Decimal(1),
       canAfford() {
@@ -90,7 +90,7 @@ addLayer("p1", {
   } // lmao
 }); //i ctrl z'd it out of existance lmao
 addLayer("p2", {
-  name: "p²", 
+  name: "p²",
   symbol: "p²",
   position: 1,
   startData() {
@@ -101,7 +101,9 @@ addLayer("p2", {
   },
   color: "#4BDC13",
   requires: new Decimal(10),
-  baseAmount(){return player.p1.points},
+  baseAmount() {
+    return player.p1.points;
+  },
   resource: "Prestige Points²",
   baseResource: "p1",
   baseAmount() {
@@ -127,14 +129,14 @@ addLayer("p2", {
     }
   ],
   layerShown() {
-    if (hasUpgrade('p1', 11))
-    return true;
+    if (hasUpgrade("p1", 11)) return true;
   },
   upgrades: {
     11: {
       name: "What",
-      title : "What?",
-      description: "You look around, and see a top spinning... you've watched enough of a moive to know what that means",
+      title: "What?",
+      description:
+        "You look around, and see a top spinning... you've watched enough of a moive to know what that means",
       cost: new Decimal(20),
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
@@ -154,22 +156,24 @@ addLayer("p2", {
       title: "NO LEMMIE BUY THE ONE BEFORE THIS!",
       description: "No, I don't think I will",
       cost: new Decimal(100),
-      unlocked() { return hasUpgrade("p2", 21) || hasUpgrade("p1", 11) }
+      unlocked() {
+        return hasUpgrade("p2", 21) || hasUpgrade("p1", 11);
+      }
     },
     31: {
       name: "",
       title: " ",
       description: "spooky ghost",
       style: {
-    opacity: 0
-}
+        opacity: 0
+      }
     },
     32: {
       name: "",
       title: " ",
       description: "spooky ghost",
       style: {
-    opacity: 0
+        opacity: 0
       }
     },
     33: {
@@ -177,14 +181,16 @@ addLayer("p2", {
       title: " ",
       description: "spooky ghost",
       style: {
-    opacity: 0
+        opacity: 0
       }
     },
     34: {
       name: "HAHHHAHAHAH",
       title: "WHY IS THIS HERE?",
       description: "I WANTED IT TO BE HERE!",
-      unlocked() { return hasUpgrade("p2", 12) || hasUpgrade("p1", 11) },
+      unlocked() {
+        return hasUpgrade("p2", 12) || hasUpgrade("p1", 11);
+      },
       cost: new Decimal(1000)
     }
   }
@@ -193,11 +199,13 @@ addLayer("p3", {
   name: "p³",
   symbol: "p³",
   position: 2,
-  layerShown() { return hasUpgrade('p2', 34) },
+  layerShown() {
+    return hasUpgrade("p2", 34);
+  },
   startData() {
     return {
       unlocked: false,
-      points: new Decimal(0),
+      points: new Decimal(0)
     };
   },
   color: "#4BDC13",
@@ -218,7 +226,7 @@ addLayer("p3", {
   },
   row: 3,
   effect() {
-    return player.p3.points.plus(1)
+    return player.p3.points.plus(1);
   },
   hotkeys: [
     {
@@ -228,7 +236,5 @@ addLayer("p3", {
         if (canReset(this.layer)) doReset(this.layer);
       }
     }
-  ],
-  },
-
-        );
+  ]
+});
