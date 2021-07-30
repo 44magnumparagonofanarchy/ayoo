@@ -51,6 +51,7 @@ addLayer("p1", {
   gainMult() {
     mult = new Decimal(1);
     return mult;
+    mult = mult.mul(tmp.p3.effect);
   },
   gainExp() {
     return new Decimal(1);
@@ -192,7 +193,7 @@ addLayer("p3", {
   name: "p³",
   symbol: "p³",
   position: 2,
-  layerShown() { return hasUpgrade('p2', 32) },
+  layerShown() { return hasUpgrade('p2', 34) },
   startData() {
     return {
       unlocked: false,
