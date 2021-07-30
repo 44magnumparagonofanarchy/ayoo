@@ -239,18 +239,21 @@ addLayer("p3", {
     11: {
       name: "progress",
       title: "FECKIN' PROGRESS!",
-      description: "You decided to go back to the first layer, and found another top. you broke it. now p¹ points multiply point gain.",
-      cost : new Decimal(10),
-      effect: player.p1.points    }
-  },
-  hotkeys: [
-    {
-      key: "3",
-      description: "3: Reset for p<sup>3",
-      onPress() {
-        if (canReset(this.layer)) doReset(this.layer);
+      description:
+        "You decided to go back to the first layer, and found another top. you broke it. now p¹ points multiply point gain.",
+      cost: new Decimal(10),
+      effect() {
+        return player.p1.points;
       }
-    }
-  ]
+    },
+    hotkeys: [
+      {
+        key: "3",
+        description: "3: Reset for p<sup>3",
+        onPress() {
+          if (canReset(this.layer)) doReset(this.layer);
+        }
+      }
+    ]
+  }
 });
-
