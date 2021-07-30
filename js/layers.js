@@ -240,8 +240,8 @@ addLayer("p3", {
       name: "progress",
       title: "FECKIN' PROGRESS!",
       description: "You decided to go back to the first layer, and found another top. you broke it. now p¹ points multiply point gain.",
-      cost : new Decimal(10)
-    }
+      cost : new Decimal(10),
+      effect: player.p1.points    }
   },
   hotkeys: [
     {
@@ -253,3 +253,4 @@ addLayer("p3", {
     }
   ]
 });
+
