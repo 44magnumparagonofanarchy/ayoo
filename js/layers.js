@@ -129,7 +129,7 @@ addLayer("p2", {
     return new Decimal(1);
   },
   effect() {
-    return player.p2.points.mul(1.0025);
+    return player.p2.points.mul(1.025);
   },
   row: 0,
   hotkeys: [
