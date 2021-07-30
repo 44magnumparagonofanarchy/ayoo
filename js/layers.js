@@ -87,7 +87,16 @@ addLayer("p1", {
       canAfford() {
         return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
       }
-    } // p2 21 does not exist, tehrefore the game breaks
+    },
+    31:{
+      name: "What?",
+      title: "Break another spinning top.",
+      description: "I hate this game. this can't be the end.",
+      cost : new Decimal(1000),
+      unlocked() {
+        return hasUpgrade("p3", 11) || hasUpgrade("p1", 11);
+    }
+    }
   } // lmao
 }); //i ctrl z'd it out of existance lmao
 addLayer("p2", {
