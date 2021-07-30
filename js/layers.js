@@ -51,6 +51,7 @@ addLayer("p1", {
   gainMult() {
     mult = new Decimal(1);
     mult = mult.mul(tmp.p3.effect);
+    mult = mult.mul(tmp.p3.effect);
     return mult;
   },
   gainExp() {
@@ -118,6 +119,9 @@ addLayer("p2", {
   gainExp() {
     return new Decimal(1);
   },
+  effect() {
+    return player.p2.points.mul(1.0025);
+  },
   row: 0,
   hotkeys: [
     {
@@ -129,8 +133,9 @@ addLayer("p2", {
     }
   ],
   layerShown() {
+    if (player.p2.unlocked) return true;
     if (hasUpgrade("p1", 11)) return true;
-    else
+    else 
       return false;
   },
   upgrades: {
