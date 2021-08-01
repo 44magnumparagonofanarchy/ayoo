@@ -96,7 +96,13 @@ addLayer("p1", {
       unlocked() {
         return hasUpgrade("p1", 11)
       }
-    }
+    },
+    22: {
+      name: "progress 2",
+      title: "progess? awwwwwwwwws shi-",
+      description: "p¹ points add to point gain",
+      cost: new Decimal(10)
+    },
   }
 });
 addLayer("p2", {
