@@ -2,7 +2,7 @@ let modInfo = {
   name: "The Inception Tree?",
   id: "ytsaTerAsebuP",
   author: "44. Magnum",
-  pointsName: "points",
+  pointsName: "dreams",
   discordName: "44. Magnum, Paragon of Anarchy!",
   discordLink: "none lol",
   initialStartPoints: new Decimal(10), // Used for hard resets and new players
@@ -12,7 +12,7 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-  num: "0.0",
+  num: "0.1.-3.14159629349",
   name: "Hanosa"
 };
 
@@ -44,7 +44,7 @@ function getPointGen() {
   if (hasUpgrade("p1", 11)) gain = gain.times(2);
   if (hasUpgrade("p2", 11))
     gain = fain.times(1000000000000000000000000000000000000);
-  if (hasUpgrade("p3",)
+  if (hasUpgrade("p3", 12)) gain = gain.times("e2800000000000")
   if (hasUpgrade("p3", 11)) gain = gain.times(upgradeEffect("p3", 11));
   if (hasUpgrade("p1", 31)) gain = gain.times(100);
   if (hasUpgrade("p1", 21)) gain = gain.times(3);
