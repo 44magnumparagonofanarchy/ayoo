@@ -217,7 +217,8 @@ addLayer("p2", {
     41: {
      name: "USELESS!" ,
       title: "useless?",
-      description: 
+      description: "unlock the final(?) p³ upgrade",
+      cost : new Decimal(300)
     }
   }
 });
@@ -265,6 +266,12 @@ addLayer("p3", {
       effect() {
         return player.p1.points;
       }
+    },
+    12: {
+      name: "hjhe",
+      title: "Hanosa",
+      description: "you decided to take a top with you, and you woke up again. Welcome to the buyable's fantasy.",
+      cost : new Decimal(100)
     },
     hotkeys: [
       {
