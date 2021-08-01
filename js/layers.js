@@ -73,31 +73,32 @@ addLayer("p1", {
   upgrades: {
     11: {
       title: "Wake up",
-      description: "You've been asleep so long.",
-      onPurchase() {
-        player.p.whatever = true
-      },
-      cost: new Decimal(1),
-      canAfford() {
-        return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
-      }
+      description: "You've been asleep so long."
     },
-    31: {
-      name: "What?",
-      title: "Break another spinning top.",
-      description: "I hate this game. this can't be the end.",
-      cost: new Decimal(1000),
-      unlocked() {
-        return hasUpgrade("p3", 11);
-      }
-    },
-    21: {
-      name: "why hello there, progress",
-      title: "why hello there, progress",
-      description: "Multiply p"
+    cost: new Decimal(1),
+    canAfford() {
+      return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
     }
-  } // lmao
-}); //i ctrl z'd it out of existance lmao
+  },
+  31: {
+    name: "What?",
+    title: "Break another spinning top.",
+    description: "I hate this game. this can't be the end.",
+    cost: new Decimal(1000),
+    unlocked() {
+      return hasUpgrade("p3", 11);
+    }
+  },
+  21: {
+    name: "why hello there, progress",
+    title: "why hello there, progress",
+    description: "Multiply points by 3.",
+    cost: new Decimal(3),
+    unlocked() {
+      true;
+    }
+  } 
+}); 
 addLayer("p2", {
   name: "p²",
   symbol: "p²",
