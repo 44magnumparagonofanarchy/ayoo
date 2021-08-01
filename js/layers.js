@@ -213,6 +213,11 @@ addLayer("p2", {
         return hasUpgrade("p2", 12) || hasUpgrade("p1", 11);
       },
       cost: new Decimal(1000)
+    },
+    41: {
+     name: "USELESS!" ,
+      title: "useless?",
+      description: 
     }
   }
 });
