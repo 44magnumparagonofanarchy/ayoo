@@ -83,7 +83,7 @@ addLayer("p1", {
       name: "What?",
       title: "Break another spinning top.",
       description: "I hate this game. this can't be the end.",
-      cost: new Decimal(1000),
+      cost: new Decimal(100),
       unlocked() {
         return hasUpgrade("p3", 11);
       }
