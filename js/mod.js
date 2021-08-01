@@ -42,7 +42,6 @@ function getPointGen() {
 
   let gain = new Decimal(1);
   if (hasUpgrade("p1", 11)) gain = gain.times(2);
-  if (hasUpgrade("p1", 12)) gain = gain.times(NaN);
   if (hasUpgrade("p2", 11))
     gain = fain.times(1000000000000000000000000000000000000);
   if (hasUpgrade("p3", 11)) gain = gain.times(upgradeEffect("p3", 11));

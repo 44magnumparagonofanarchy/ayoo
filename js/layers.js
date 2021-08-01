@@ -82,15 +82,6 @@ addLayer("p1", {
         return !hasUpgrade("p1", 12) && player.p1.points.gte(this.cost);
       }
     },
-    12: {
-      name: "Stay Asleep",
-      title: "Stay asleep",
-      description: "Just one more minute...",
-      cost: new Decimal(1),
-      canAfford() {
-        return !hasUpgrade("p1", 11) && player.p1.points.gte(this.cost);
-      }
-    },
     31: {
       name: "What?",
       title: "Break another spinning top.",
@@ -101,7 +92,9 @@ addLayer("p1", {
       }
     },
     21: {
-     name :  
+      name: "why hello there, progress",
+      title: "why hello there, progress",
+      description: "Multiply p"
     }
   } // lmao
 }); //i ctrl z'd it out of existance lmao
