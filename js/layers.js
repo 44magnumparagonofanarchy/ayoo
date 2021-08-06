@@ -260,6 +260,15 @@ addLayer("p3", {
     return new Decimal(1);
   },
   row: 3,
+    hotkeys: [
+    {
+      key: "3",
+      description: "3: Reset for p³",
+      onPress() {
+        if (canReset(this.layer)) doReset(this.layer);
+      }
+    }
+  ],
   effect() {
     return player.p3.points.plus(1);
   },
