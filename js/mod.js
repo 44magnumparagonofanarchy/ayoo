@@ -45,7 +45,7 @@ function getPointGen() {
   if (hasUpgrade("p2", 11))
     gain = fain.times(1000000000000000000000000000000000000);
   if (hasUpgrade("p3", 12)) gain = gain.times("e2800000000000")
-  if (hasUpgrade("p3", 11)) gain = gain.times(upgradeEffect("p3", 11));
+  if (hasUpgrade("p3", 11)) gain = gain.add(upgradeEffect("p3", 11));
   if (hasUpgrade("p1", 31)) gain = gain.times(100);
   if (hasUpgrade("p1", 21)) gain = gain.times(3);
   if (hasUpgrade("p1", 22)) gain = gain.plus(player.p1.points);

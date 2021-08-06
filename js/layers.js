@@ -91,7 +91,7 @@ addLayer("p1", {
     21: {
       name: "why hello there, progress",
       title: "why hello there, progress",
-      description: "Multiply points by 3.",
+      description: "Multiply dreams by 3.",
       cost: new Decimal(3),
       unlocked() {
         return hasUpgrade("p1", 11)
@@ -100,7 +100,7 @@ addLayer("p1", {
     22: {
       name: "progress 2",
       title: "progess? awwwwwwwwws shi-",
-      description: "p¹ points add to point gain",
+      description: "p¹ dreams add to dreamv gain",
       cost: new Decimal(10)
     },
   }
@@ -261,7 +261,7 @@ addLayer("p3", {
       name: "progress",
       title: "FECKIN' PROGRESS!",
       description:
-        "You decided to go back to the first layer, and found another top. you broke it. now p¹ points multiply point gain.",
+        "You decided to go back to the first layer, and found another top. you broke it. now p¹ points add to point gain.",
       cost: new Decimal(10),
       effect() {
         return player.p1.points;
