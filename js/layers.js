@@ -221,7 +221,10 @@ addLayer("p2", {
      name: "USELESS!" ,
       title: "useless?",
       description: "unlock the final(?) p³ upgrade",
-      cost : new Decimal(300)
+      cost : new Decimal(2000),
+      unlocked() {
+       return hasUpgrade("p3", 11) 
+      }
     }
   }
 });
