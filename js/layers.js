@@ -100,7 +100,7 @@ addLayer("p1", {
     22: {
       name: "progress 2",
       title: "progess? awwwwwwwwws shi-",
-      description: "p¹ dreams add to dream gain",
+      description: "p¹ pointies add to dream gain",
       cost: new Decimal(10)
     },
   }
@@ -202,7 +202,7 @@ addLayer("p2", {
       title: " ",
       description: "spooky ghost",
       effect() {
-        
+        return player.p3.points
       },
       style: {
         opacity: 0
@@ -250,6 +250,7 @@ addLayer("p3", {
   exponent: 0.5,
   gainMult() {
     mult = new Decimal(1);
+    if (hasUpgrade("p2", 33)) mult = mult.times(upgradeEffect("p2", 33));
     return mult;
   },
   gainExp() {
