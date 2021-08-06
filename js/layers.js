@@ -82,7 +82,7 @@ addLayer("p1", {
     31: {
       name: "What?",
       title: "Break another spinning top.",
-      description: "I hate this game. this can't be the end.",
+      description: "I hate this game. this can't be the end. only 11 upgrades???",
       cost: new Decimal(100),
       unlocked() {
         return hasUpgrade("p3", 11);
@@ -201,6 +201,9 @@ addLayer("p2", {
       name: "",
       title: " ",
       description: "spooky ghost",
+      effect() {
+        return player.p3.points
+      },
       style: {
         opacity: 0
       }
