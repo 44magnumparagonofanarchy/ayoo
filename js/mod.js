@@ -7,7 +7,7 @@ let modInfo = {
   discordLink: "none lol",
   initialStartPoints: new Decimal(10), // Used for hard resets and new players
 
-  offlineLimit: 1 // In hours
+  offlineLimit: 0.30// In hours
 };
 
 // Set your version in num and name
@@ -17,7 +17,9 @@ let VERSION = {
 };
 
 let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
+	<h3>v0.2</h3><br>
+  
+    - Fixed 12 bugs (10 found by my dumb self).<br>
 		- Do we wake them up?.<br>
 		- Yes..`;
 

@@ -202,7 +202,7 @@ addLayer("p2", {
       title: " ",
       description: "spooky ghost",
       effect() {
-        return player.p3.points
+        return player.p3.points.add(1)
       },
       style: {
         opacity: 0
